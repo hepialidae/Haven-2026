@@ -173,10 +173,10 @@ MonoBehaviour:
       m_Flags: 8
     m_Flags: 0
   canMove: 1
-  xValue: -6
+  xValue: -5.897
   minY: -4.24
   maxY: 4.24
-  moveSpeed: 0.1
+  moveSpeed: 0.17
   rotationSpeed: 0.3
 --- !u!50 &6249876053224421827
 Rigidbody2D:

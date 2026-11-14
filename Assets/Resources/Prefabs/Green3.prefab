@@ -343,7 +343,7 @@ MonoBehaviour:
       m_Flags: 8
     m_Flags: 0
   canMove: 1
-  xValue: -6
+  xValue: -5.676
   minY: -3.827
   maxY: 3.827
   moveSpeed: 0.1

@@ -7,6 +7,8 @@ public class GamestateManagerScript : MonoBehaviour
     public static GamestateManagerScript instance;
     public int greenSpacecraft = 99;
     public int yellowSpacecraft = 99;
+    [SerializeField] private GameObject[] greenSpacecrafts;
+    [SerializeField] private GameObject[] yellowSpacecrafts;
     private bool gameLoaded = false;
 
     void Awake()
@@ -36,5 +38,11 @@ public class GamestateManagerScript : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("Pong");
+    }
+
+    public void SpawnCrafts()
+    {
+        Instantiate(greenSpacecrafts[greenSpacecraft]);
+        Instantiate(yellowSpacecrafts[yellowSpacecraft]);
     }
 }

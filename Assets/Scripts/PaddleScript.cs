@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,7 +9,7 @@ public class Paddle1Script : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private InputAction horizontalControls;
     [SerializeField] private InputAction verticalControls;
-    [SerializeField] private bool canMove = true;
+    [SerializeField] private bool canMove = false;
     [SerializeField] private float xValue = 6f;
     [SerializeField] private float minY = -3.995f;
     [SerializeField] private float maxY = 3.995f;
@@ -22,17 +23,42 @@ public class Paddle1Script : MonoBehaviour
     {
         horizontalControls.Enable();
         verticalControls.Enable();
+        canMove = true;
     }
 
     void OnDisable()
     {
         horizontalControls.Disable();
         verticalControls.Disable();
+        canMove = false;
+    }
+
+    private void Enable()
+    {
+        horizontalControls.Enable();
+        verticalControls.Enable();
+        canMove = true;
+    }
+
+    private void Disable()
+    {
+        horizontalControls.Disable();
+        verticalControls.Disable();
+        canMove = false;
     }
 
     void Start()
     {
+        if (!canMove)
+        {
+            Disable();
+
+            StartCoroutine(StartGame());
+        }
+
         _transform = GetComponent<Transform>();
+
+        _transform.position = new Vector3 (xValue, 0f, 0f);
     }
 
     void Update()
@@ -50,5 +76,11 @@ public class Paddle1Script : MonoBehaviour
             _transform.SetPositionAndRotation(newPos, 
                                               new Quaternion (0f, 0f, horDirection * rotationSpeed, 1f));
         }
+    }
+
+    private IEnumerator StartGame()
+    {
+        yield return new WaitForSeconds(5f);
+        Enable();
     }
 }

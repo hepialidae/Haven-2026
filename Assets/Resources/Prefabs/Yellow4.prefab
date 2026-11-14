@@ -200,10 +200,10 @@ MonoBehaviour:
       m_Flags: 8
     m_Flags: 0
   canMove: 1
-  xValue: 6
+  xValue: 5.68
   minY: -3.949
   maxY: 3.949
-  moveSpeed: 0.1
+  moveSpeed: 0.12
   rotationSpeed: 0.3
 --- !u!60 &1024411681575105639
 PolygonCollider2D:

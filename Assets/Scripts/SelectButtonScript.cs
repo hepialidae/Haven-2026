@@ -19,5 +19,7 @@ public class SelectButtonScript : MonoBehaviour
     public void OnClick()
     {
         _image.color = selectedColor;
+
+        AudioManagerScript.instance.Play(AudioManagerScript.instance.lockIn);
     }
 }

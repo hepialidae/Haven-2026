@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Green
   - Yellow
+  - Ball
   layers:
   - Default
   - TransparentFX
