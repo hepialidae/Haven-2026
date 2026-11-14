@@ -203,7 +203,7 @@ MonoBehaviour:
   xValue: 5.676
   minY: -3.827
   maxY: 3.827
-  moveSpeed: 0.1
+  moveSpeed: 0.115
   rotationSpeed: 0.3
 --- !u!60 &5235088673228774196
 PolygonCollider2D:

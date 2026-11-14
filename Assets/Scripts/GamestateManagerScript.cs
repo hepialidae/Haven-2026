@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,7 @@ public class GamestateManagerScript : MonoBehaviour
     [SerializeField] private GameObject[] greenSpacecrafts;
     [SerializeField] private GameObject[] yellowSpacecrafts;
     private bool gameLoaded = false;
+    public Dictionary<string, int> powerUpStatus = new Dictionary<string, int>(); // 0 - inactive, 1 - green, 2 - yellow
 
     void Awake()
     {
@@ -34,6 +36,12 @@ public class GamestateManagerScript : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        EventManagerScript.instance.DoubleSpeed += StartTimeDoubleSpeed;
+        powerUpStatus["2x Speed"] = 0;
+    }
+
     private IEnumerator StartGame()
     {
         yield return new WaitForSeconds(0.5f);
@@ -44,5 +52,17 @@ public class GamestateManagerScript : MonoBehaviour
     {
         Instantiate(greenSpacecrafts[greenSpacecraft]);
         Instantiate(yellowSpacecrafts[yellowSpacecraft]);
+    }
+
+    private void StartTimeDoubleSpeed()
+    {
+        StartCoroutine(TimeDoubleSpeed());
+    }
+
+    private IEnumerator TimeDoubleSpeed()
+    {
+        yield return new WaitForSeconds(5f);
+
+        EventManagerScript.instance.InvokeEndDoubleSpeed();
     }
 }

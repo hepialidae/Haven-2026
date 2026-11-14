@@ -8,6 +8,7 @@ public class AudioManagerScript : MonoBehaviour
     [SerializeField] public AudioSource bounce;
     [SerializeField] public AudioSource hitPlanet;
     [SerializeField] public AudioSource lockIn;
+    [SerializeField] public AudioSource powerUp;
 
     void Awake()
     {
