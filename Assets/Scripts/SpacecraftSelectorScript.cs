@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class SpacecraftSelectorScript : MonoBehaviour
 {
+    [SerializeField] private string color;
     [SerializeField] private Sprite[] scSprites;
     [SerializeField] private Vector2[] spriteSizes;
     [SerializeField] private GameObject leftArrow;
@@ -57,6 +58,21 @@ public class SpacecraftSelectorScript : MonoBehaviour
             {
                 leftArrow.SetActive(true);
                 rightArrow.SetActive(true);
+            }
+        }
+    }
+
+    public void SelectClicked()
+    {
+        if (color == "green")
+        {
+            GamestateManagerScript.instance.greenSpacecraft = _currentIndex;
+        }
+        else
+        {
+            if (color == "yellow")
+            {
+                GamestateManagerScript.instance.yellowSpacecraft = _currentIndex;
             }
         }
     }

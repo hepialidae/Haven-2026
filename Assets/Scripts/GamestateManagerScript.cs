@@ -1,10 +1,13 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GamestateManagerScript : MonoBehaviour
 {
     public static GamestateManagerScript instance;
-    public int greenSpacecraft;
-    public int yellowSpacecraft;
+    public int greenSpacecraft = 99;
+    public int yellowSpacecraft = 99;
+    private bool gameLoaded = false;
 
     void Awake()
     {
@@ -18,5 +21,20 @@ public class GamestateManagerScript : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
+    }
+
+    void FixedUpdate()
+    {
+        if (greenSpacecraft != 99 && yellowSpacecraft != 99 && !gameLoaded)
+        {
+            gameLoaded = true;
+            StartCoroutine(StartGame());
+        }
+    }
+
+    private IEnumerator StartGame()
+    {
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene("Pong");
     }
 }
