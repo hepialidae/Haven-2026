@@ -10,8 +10,8 @@ public class PowerUpBaseScript : MonoBehaviour
     {
         _transform = GetComponent<Transform>();
 
-        // Vector3 newPos = new Vector3 (UnityEngine.Random.Range(-3.567f, 3.567f), UnityEngine.Random.Range(-4.49f, 4.49f), 0f);
-        // _transform.position = newPos;
+        Vector3 newPos = new Vector3 (UnityEngine.Random.Range(-3.567f, 3.567f), UnityEngine.Random.Range(-4.49f, 4.49f), 0f);
+        _transform.position = newPos;
     }
 
     void OnTriggerEnter2D(Collider2D other)

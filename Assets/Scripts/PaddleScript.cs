@@ -40,7 +40,7 @@ public class Paddle1Script : MonoBehaviour
         canMove = true;
     }
 
-    private void Disable()
+    private void Disable(string color)
     {
         horizontalControls.Disable();
         verticalControls.Disable();
@@ -49,16 +49,17 @@ public class Paddle1Script : MonoBehaviour
 
     void Start()
     {
-        if (!canMove)
-        {
-            Disable();
-
-            StartCoroutine(StartGame());
-        }
+        Disable("");
 
         _transform = GetComponent<Transform>();
 
         _transform.position = new Vector3 (xValue, 0f, 0f);
+
+        EventManagerScript.instance.PlanetHit.AddListener(Disable);
+        EventManagerScript.instance.ResetGame += StartGameWrapper;
+        EventManagerScript.instance.LoseGame.AddListener(Disable);
+
+        StartCoroutine(StartGame());
     }
 
     void Update()
@@ -82,5 +83,10 @@ public class Paddle1Script : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         Enable();
+    }
+
+    private void StartGameWrapper()
+    {
+        StartCoroutine(StartGame());
     }
 }

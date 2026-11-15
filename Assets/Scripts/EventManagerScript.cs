@@ -1,9 +1,13 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EventManagerScript : MonoBehaviour
 {
     public static EventManagerScript instance;
+
+    [Serializable]
+    public class StringEvent : UnityEvent<string> { }
 
     void Awake()
     {
@@ -29,5 +33,23 @@ public class EventManagerScript : MonoBehaviour
     public void InvokeEndDoubleSpeed()
     {
         EndDoubleSpeed.Invoke();
+    }
+
+    public StringEvent PlanetHit;
+    public void InvokePlanetHit(string color)
+    {
+        PlanetHit.Invoke(color);
+    }
+
+    public event Action ResetGame;
+    public void InvokeResetGame()
+    {
+        ResetGame.Invoke();
+    }
+
+    public StringEvent LoseGame;
+    public void InvokeLoseGame(string color)
+    {
+        LoseGame.Invoke(color);
     }
 }

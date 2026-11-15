@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class BallScript : MonoBehaviour
 {
+    private Transform _transform;
     private Rigidbody2D _rb;
     private SpriteRenderer _sr;
     [SerializeField] private float speed = 10f;
@@ -14,6 +15,7 @@ public class BallScript : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _sr = GetComponent<SpriteRenderer>();
+        _transform = GetComponent<Transform>();
 
         _sr.color = Color.white;
 
@@ -28,10 +30,17 @@ public class BallScript : MonoBehaviour
 
         EventManagerScript.instance.DoubleSpeed += StartDoubleSpeed;
         EventManagerScript.instance.EndDoubleSpeed += EndDoubleSpeed;
+        EventManagerScript.instance.PlanetHit.AddListener(ResetGameWrapper);
+        EventManagerScript.instance.ResetGame += StartGameWrapper;
     }
 
     private IEnumerator StartGame()
     {
+        Vector3 newPos = new Vector3 (0f, 0f, 0f);
+        _transform.position = newPos;
+        _rb.linearVelocity = Vector3.zero;
+        _rb.angularVelocity = 0f;
+
         yield return new WaitForSeconds(5f);
 
         bool isRight = UnityEngine.Random.value >= 0.5f;
@@ -42,6 +51,11 @@ public class BallScript : MonoBehaviour
         }
         float yVelocity = UnityEngine.Random.Range(-1, 1);
         _rb.linearVelocity = new Vector2(xVelocity * speed, yVelocity * speed);
+    }
+
+    private void StartGameWrapper()
+    {
+        StartCoroutine(StartGame());
     }
 
     private void UpdateSpeed(float newSpeed)
@@ -111,5 +125,25 @@ public class BallScript : MonoBehaviour
                 }
             }
         }
+    }
+
+    private IEnumerator ResetGame()
+    {
+        Sprite sprite = _sr.sprite;
+
+        _sr.sprite = null;
+        yield return new WaitForSeconds(0.3f);
+        _sr.sprite = sprite;
+        yield return new WaitForSeconds(0.3f);
+        _sr.sprite = null;
+        yield return new WaitForSeconds(0.3f);
+        _sr.sprite = sprite;
+
+        EventManagerScript.instance.InvokeResetGame();
+    }
+
+    private void ResetGameWrapper(string color)
+    {
+        StartCoroutine(ResetGame());
     }
 }
