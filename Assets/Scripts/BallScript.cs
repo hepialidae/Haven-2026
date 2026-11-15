@@ -6,7 +6,7 @@ public class BallScript : MonoBehaviour
     private Transform _transform;
     private Rigidbody2D _rb;
     private SpriteRenderer _sr;
-    [SerializeField] private float speed = 10f;
+    [SerializeField] private float speed = 6f;
     private Color _green;
     private Color _yellow;
     
@@ -37,6 +37,7 @@ public class BallScript : MonoBehaviour
 
     private IEnumerator StartGame()
     {
+        speed = 6f;
         Vector3 newPos = new Vector3 (0f, 0f, 0f);
         _transform.position = newPos;
         _rb.linearVelocity = Vector3.zero;
@@ -89,9 +90,15 @@ public class BallScript : MonoBehaviour
 
     private void EndDoubleSpeed()
     {
-        UpdateSpeed(speed * 0.5f);
+        if (GamestateManagerScript.instance.powerUpStatus["2x Speed"] != 0)
+        {
+            if ((_sr.color == _green && GamestateManagerScript.instance.powerUpStatus["2x Speed"] == 1) || (_sr.color == _yellow && GamestateManagerScript.instance.powerUpStatus["2x Speed"] == 2))
+            {
+                UpdateSpeed(speed * 0.5f);
+            }
 
-        GamestateManagerScript.instance.powerUpStatus["2x Speed"] = 0;
+            GamestateManagerScript.instance.powerUpStatus["2x Speed"] = 0;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
