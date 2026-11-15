@@ -15,7 +15,7 @@ public class PowerUpSpawnerScript : MonoBehaviour
         timer = 0;
 
         EventManagerScript.instance.ResetGame += ResetGame;
-        
+
         StartCoroutine(WaitForCutscene());
     }
 
@@ -47,5 +47,7 @@ public class PowerUpSpawnerScript : MonoBehaviour
         {
             Destroy(existingPowerUps[i]);
         }
+
+        StartCoroutine(WaitForCutscene());
     }
 }

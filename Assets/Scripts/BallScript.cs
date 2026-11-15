@@ -21,8 +21,6 @@ public class BallScript : MonoBehaviour
 
         GamestateManagerScript.instance.SpawnCrafts();
 
-        StartCoroutine(StartGame());
-
         UnityEngine.ColorUtility.TryParseHtmlString("#B0FB76", out Color color);
         _green = color;
         UnityEngine.ColorUtility.TryParseHtmlString("#FEF07B", out Color color2);
@@ -32,6 +30,9 @@ public class BallScript : MonoBehaviour
         EventManagerScript.instance.EndDoubleSpeed += EndDoubleSpeed;
         EventManagerScript.instance.PlanetHit.AddListener(ResetGameWrapper);
         EventManagerScript.instance.ResetGame += StartGameWrapper;
+        EventManagerScript.instance.LoseGame.AddListener(LoseGameWrapper);
+
+        StartCoroutine(StartGame());
     }
 
     private IEnumerator StartGame()
@@ -129,6 +130,9 @@ public class BallScript : MonoBehaviour
 
     private IEnumerator ResetGame()
     {
+        _rb.linearVelocity = Vector3.zero;
+        _rb.angularVelocity = 0f;
+
         Sprite sprite = _sr.sprite;
 
         _sr.sprite = null;
@@ -145,5 +149,26 @@ public class BallScript : MonoBehaviour
     private void ResetGameWrapper(string color)
     {
         StartCoroutine(ResetGame());
+    }
+
+    private IEnumerator LoseGame()
+    {
+        _rb.linearVelocity = Vector3.zero;
+        _rb.angularVelocity = 0f;
+
+        Sprite sprite = _sr.sprite;
+
+        _sr.sprite = null;
+        yield return new WaitForSeconds(0.3f);
+        _sr.sprite = sprite;
+        yield return new WaitForSeconds(0.3f);
+        _sr.sprite = null;
+        yield return new WaitForSeconds(0.3f);
+        _sr.sprite = sprite;
+    }
+
+    private void LoseGameWrapper(string color)
+    {
+        StartCoroutine(LoseGame());
     }
 }

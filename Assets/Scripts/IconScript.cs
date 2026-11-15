@@ -11,6 +11,8 @@ public class IconScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        _sr = GetComponent<SpriteRenderer>();
+
         EventManagerScript.instance.PlanetHit.AddListener(OnHitWrapper);
         EventManagerScript.instance.LoseGame.AddListener(LoseGame);
     }
@@ -36,9 +38,6 @@ public class IconScript : MonoBehaviour
 
     private void LoseGame(string input)
     {
-        if (input == color)
-        {
-            _sr.sprite = onHit;
-        }
+        _sr.sprite = null;
     }
 }

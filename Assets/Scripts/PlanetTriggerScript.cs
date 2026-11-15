@@ -9,11 +9,17 @@ public class PlanetTriggerScript : MonoBehaviour
     private int hitsTaken = 0;
     private int maxHits = 3;
 
+    void Start()
+    {
+        _sr = GetComponent<SpriteRenderer>();
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Ball"))
         {
             hitsTaken += 1;
+            AudioManagerScript.instance.Play(AudioManagerScript.instance.hitPlanet);
             if (hitsTaken == maxHits)
             {
                 StartCoroutine(animatePlanet(planets[maxHits], null));

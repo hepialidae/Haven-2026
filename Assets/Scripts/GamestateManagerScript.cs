@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -38,6 +39,7 @@ public class GamestateManagerScript : MonoBehaviour
 
     void Start()
     {
+        EventManagerScript.instance.ResetGame += ResetPowerups;
         EventManagerScript.instance.DoubleSpeed += StartTimeDoubleSpeed;
         powerUpStatus["2x Speed"] = 0;
     }
@@ -64,5 +66,10 @@ public class GamestateManagerScript : MonoBehaviour
         yield return new WaitForSeconds(5f);
 
         EventManagerScript.instance.InvokeEndDoubleSpeed();
+    }
+
+    private void ResetPowerups()
+    {
+        powerUpStatus["2x Speed"] = 0;
     }
 }
