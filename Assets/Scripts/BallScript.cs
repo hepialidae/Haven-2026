@@ -7,8 +7,10 @@ public class BallScript : MonoBehaviour
     private Rigidbody2D _rb;
     private SpriteRenderer _sr;
     [SerializeField] private float speed = 6f;
+    [SerializeField] private float idleVelocityThreshold = 5f;
     private Color _green;
     private Color _yellow;
+    private float timer;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -58,6 +60,22 @@ public class BallScript : MonoBehaviour
     private void StartGameWrapper()
     {
         StartCoroutine(StartGame());
+    }
+
+    void Update()
+    {
+        if (_rb.linearVelocity.x + _rb.linearVelocity.y <= idleVelocityThreshold)
+        {
+            timer += Time.deltaTime;
+        } 
+        else
+        {
+            timer = 0;
+        }
+        if (timer >= 3f)
+        {
+            EventManagerScript.instance.InvokeResetGame();
+        }
     }
 
     private void UpdateSpeed(float newSpeed)

@@ -7,9 +7,14 @@ public class SpacecraftSelectorScript : MonoBehaviour
     [SerializeField] private Vector2[] spriteSizes;
     [SerializeField] private GameObject leftArrow;
     [SerializeField] private GameObject rightArrow;
+    [Header("Speed Bar")]
     [SerializeField] private UnityEngine.UI.Image speedbar;
     [SerializeField] private Sprite[] speedbars;
     [SerializeField] private int[] scSpeedIndex;
+    [Header("Size Bar")]
+    [SerializeField] private UnityEngine.UI.Image sizebar;
+    [SerializeField] private Sprite[] sizebars;
+    [SerializeField] private int[] scSizeIndex;
     private UnityEngine.UI.Image _image;
     private RectTransform _transform;
     private int _currentIndex = 0;
@@ -34,6 +39,7 @@ public class SpacecraftSelectorScript : MonoBehaviour
             _image.sprite = scSprites[_currentIndex];
             _transform.sizeDelta = spriteSizes[_currentIndex];
             speedbar.sprite = speedbars[scSpeedIndex[_currentIndex]];
+            sizebar.sprite = sizebars[scSizeIndex[_currentIndex]];
             if (_currentIndex == 0)
             {
                 leftArrow.SetActive(false);
@@ -55,6 +61,7 @@ public class SpacecraftSelectorScript : MonoBehaviour
             _image.sprite = scSprites[_currentIndex];
             _transform.sizeDelta = spriteSizes[_currentIndex];
             speedbar.sprite = speedbars[scSpeedIndex[_currentIndex]];
+            sizebar.sprite = sizebars[scSizeIndex[_currentIndex]];
             if (_currentIndex == 4)
             {
                 leftArrow.SetActive(true);

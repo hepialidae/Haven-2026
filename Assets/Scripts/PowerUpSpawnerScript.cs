@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem.Controls;
 
 public class PowerUpSpawnerScript : MonoBehaviour
 {
@@ -15,6 +14,7 @@ public class PowerUpSpawnerScript : MonoBehaviour
         timer = 0;
 
         EventManagerScript.instance.ResetGame += ResetGame;
+        EventManagerScript.instance.LoseGame.AddListener(LoseGame);
 
         StartCoroutine(WaitForCutscene());
     }
@@ -49,5 +49,10 @@ public class PowerUpSpawnerScript : MonoBehaviour
         }
 
         StartCoroutine(WaitForCutscene());
+    }
+
+    private void LoseGame(string color)
+    {
+        nextPowerUp = 999999999f;
     }
 }

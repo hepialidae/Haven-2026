@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -87,6 +85,10 @@ public class Paddle1Script : MonoBehaviour
 
     private void StartGameWrapper()
     {
+        Disable(""); 
+        _transform.SetPositionAndRotation(new Vector3 (xValue, 0f, 0f), 
+                                              new Quaternion (0f, 0f, 0f, 1f));
+
         StartCoroutine(StartGame());
     }
 }
