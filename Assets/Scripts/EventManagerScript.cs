@@ -52,4 +52,10 @@ public class EventManagerScript : MonoBehaviour
     {
         LoseGame.Invoke(color);
     }
+
+    public StringEvent Shield;
+    public void InvokeShield(string color)
+    {
+        Shield.Invoke(color);
+    }
 }

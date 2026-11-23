@@ -12,6 +12,19 @@ public class PlanetTriggerScript : MonoBehaviour
     void Start()
     {
         _sr = GetComponent<SpriteRenderer>();
+
+        hitsTaken = 0;
+        _sr.sprite = planets[0];
+    }
+
+    void OnEnable()
+    {
+        EventManagerScript.instance.Shield.AddListener(Shielded);
+    }
+
+    void OnDisable()
+    {
+        EventManagerScript.instance.Shield.RemoveListener(Shielded);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -42,5 +55,14 @@ public class PlanetTriggerScript : MonoBehaviour
         _sr.sprite = oldSprite;
         yield return new WaitForSeconds(0.3f);
         _sr.sprite = newSprite;
+    }
+
+    private void Shielded(string input)
+    {
+        if (input == color && hitsTaken != 0)
+        {
+            hitsTaken -= 1;
+            animatePlanet(planets[hitsTaken + 1], planets[hitsTaken]);
+        }
     }
 }

@@ -10,7 +10,9 @@ public class BallScript : MonoBehaviour
     [SerializeField] private float idleVelocityThreshold = 5f;
     private Color _green;
     private Color _yellow;
+    private bool canMove = false;
     private float timer;
+    public string currentColor = null;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,6 +22,7 @@ public class BallScript : MonoBehaviour
         _transform = GetComponent<Transform>();
 
         _sr.color = Color.white;
+        canMove = false;
 
         GamestateManagerScript.instance.SpawnCrafts();
 
@@ -28,13 +31,25 @@ public class BallScript : MonoBehaviour
         UnityEngine.ColorUtility.TryParseHtmlString("#FEF07B", out Color color2);
         _yellow = color2;
 
+        StartCoroutine(StartGame());
+    }
+
+    void OnEnable()
+    {
         EventManagerScript.instance.DoubleSpeed += StartDoubleSpeed;
         EventManagerScript.instance.EndDoubleSpeed += EndDoubleSpeed;
         EventManagerScript.instance.PlanetHit.AddListener(ResetGameWrapper);
         EventManagerScript.instance.ResetGame += StartGameWrapper;
         EventManagerScript.instance.LoseGame.AddListener(LoseGameWrapper);
+    }
 
-        StartCoroutine(StartGame());
+    void OnDisable()
+    {
+        EventManagerScript.instance.DoubleSpeed -= StartDoubleSpeed;
+        EventManagerScript.instance.EndDoubleSpeed -= EndDoubleSpeed;
+        EventManagerScript.instance.PlanetHit.RemoveListener(ResetGameWrapper);
+        EventManagerScript.instance.ResetGame -= StartGameWrapper;
+        EventManagerScript.instance.LoseGame.RemoveListener(LoseGameWrapper);
     }
 
     private IEnumerator StartGame()
@@ -54,6 +69,7 @@ public class BallScript : MonoBehaviour
             xVelocity = 1f;
         }
         float yVelocity = UnityEngine.Random.Range(-1, 1);
+        canMove = true;
         _rb.linearVelocity = new Vector2(xVelocity * speed, yVelocity * speed);
     }
 
@@ -64,7 +80,10 @@ public class BallScript : MonoBehaviour
 
     void Update()
     {
-        if (_rb.linearVelocity.x + _rb.linearVelocity.y <= idleVelocityThreshold)
+        if ((_rb.linearVelocity.x + _rb.linearVelocity.y <= idleVelocityThreshold || 
+            _rb.linearVelocity.x <= 0.01f || 
+            _rb.linearVelocity.y <= 0.01f) 
+        && canMove)
         {
             timer += Time.deltaTime;
         } 
@@ -125,6 +144,7 @@ public class BallScript : MonoBehaviour
         {
             AudioManagerScript.instance.Play(AudioManagerScript.instance.bounce);
             _sr.color = _green;
+            GamestateManagerScript.instance.ballColor = "green";
 
             if (GamestateManagerScript.instance.powerUpStatus["2x Speed"] == 1)
             {
@@ -140,6 +160,7 @@ public class BallScript : MonoBehaviour
             {
                 AudioManagerScript.instance.Play(AudioManagerScript.instance.bounce);
                 _sr.color = _yellow;
+                GamestateManagerScript.instance.ballColor = "yellow";
 
                 if (GamestateManagerScript.instance.powerUpStatus["2x Speed"] == 1)
                 {
@@ -157,6 +178,7 @@ public class BallScript : MonoBehaviour
     {
         _rb.linearVelocity = Vector3.zero;
         _rb.angularVelocity = 0f;
+        canMove = false;
 
         Sprite sprite = _sr.sprite;
 
@@ -180,6 +202,7 @@ public class BallScript : MonoBehaviour
     {
         _rb.linearVelocity = Vector3.zero;
         _rb.angularVelocity = 0f;
+        canMove = false;
 
         Sprite sprite = _sr.sprite;
 

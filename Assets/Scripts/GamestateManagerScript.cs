@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +11,7 @@ public class GamestateManagerScript : MonoBehaviour
     [SerializeField] private GameObject[] greenSpacecrafts;
     [SerializeField] private GameObject[] yellowSpacecrafts;
     private bool gameLoaded = false;
+    public string ballColor = null; 
     public Dictionary<string, int> powerUpStatus = new Dictionary<string, int>(); // 0 - inactive, 1 - green, 2 - yellow
 
     void Awake()
@@ -71,5 +71,15 @@ public class GamestateManagerScript : MonoBehaviour
     private void ResetPowerups()
     {
         powerUpStatus["2x Speed"] = 0;
+    }
+
+    public void RestartGame()
+    {
+        greenSpacecraft = 99;
+        yellowSpacecraft = 99;
+        ballColor = null;
+        powerUpStatus["2x Speed"] = 0;
+        gameLoaded = false;
+        SceneManager.LoadScene("SpaceshipSelect");
     }
 }

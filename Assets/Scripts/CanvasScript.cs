@@ -12,8 +12,19 @@ public class CanvasScript : MonoBehaviour
     {
         greenWin_canvas.SetActive(false);
         yellowWin_canvas.SetActive(false);
+        
+    }
+
+    void OnEnable()
+    {
         EventManagerScript.instance.ResetGame += PlayStartGame;
         EventManagerScript.instance.LoseGame.AddListener(LoseGame);
+    }
+
+    void OnDisable()
+    {
+        EventManagerScript.instance.ResetGame -= PlayStartGame;
+        EventManagerScript.instance.LoseGame.RemoveListener(LoseGame);
     }
 
     private void PlayStartGame()

@@ -13,10 +13,19 @@ public class PowerUpSpawnerScript : MonoBehaviour
     {
         timer = 0;
 
+        StartCoroutine(WaitForCutscene());
+    }
+
+    void OnEnable()
+    {
         EventManagerScript.instance.ResetGame += ResetGame;
         EventManagerScript.instance.LoseGame.AddListener(LoseGame);
+    }
 
-        StartCoroutine(WaitForCutscene());
+    void OnDisable()
+    {
+        EventManagerScript.instance.ResetGame -= ResetGame;
+        EventManagerScript.instance.LoseGame.RemoveListener(LoseGame);
     }
 
     private IEnumerator WaitForCutscene()

@@ -12,9 +12,18 @@ public class IconScript : MonoBehaviour
     void Start()
     {
         _sr = GetComponent<SpriteRenderer>();
+    }
 
+    void OnEnable()
+    {
         EventManagerScript.instance.PlanetHit.AddListener(OnHitWrapper);
         EventManagerScript.instance.LoseGame.AddListener(LoseGame);
+    }
+
+    void OnDisable()
+    {
+        EventManagerScript.instance.PlanetHit.RemoveListener(OnHitWrapper);
+        EventManagerScript.instance.LoseGame.RemoveListener(LoseGame);
     }
 
     private IEnumerator OnHit()

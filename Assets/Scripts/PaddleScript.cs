@@ -19,6 +19,10 @@ public class Paddle1Script : MonoBehaviour
 
     void OnEnable()
     {
+        EventManagerScript.instance.PlanetHit.AddListener(Disable);
+        EventManagerScript.instance.ResetGame += StartGameWrapper;
+        EventManagerScript.instance.LoseGame.AddListener(Disable);
+
         horizontalControls.Enable();
         verticalControls.Enable();
         canMove = true;
@@ -26,6 +30,10 @@ public class Paddle1Script : MonoBehaviour
 
     void OnDisable()
     {
+        EventManagerScript.instance.PlanetHit.RemoveListener(Disable);
+        EventManagerScript.instance.ResetGame -= StartGameWrapper;
+        EventManagerScript.instance.LoseGame.RemoveListener(Disable);
+
         horizontalControls.Disable();
         verticalControls.Disable();
         canMove = false;
@@ -52,10 +60,6 @@ public class Paddle1Script : MonoBehaviour
         _transform = GetComponent<Transform>();
 
         _transform.position = new Vector3 (xValue, 0f, 0f);
-
-        EventManagerScript.instance.PlanetHit.AddListener(Disable);
-        EventManagerScript.instance.ResetGame += StartGameWrapper;
-        EventManagerScript.instance.LoseGame.AddListener(Disable);
 
         StartCoroutine(StartGame());
     }
