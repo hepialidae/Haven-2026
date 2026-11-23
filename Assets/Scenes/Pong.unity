@@ -2138,6 +2138,7 @@ MonoBehaviour:
   powerUps:
   - {fileID: 4253707223461754331, guid: 0127bca9350034a219fb21161d4d415a, type: 3}
   - {fileID: 4253707223461754331, guid: ecd01eaabb85843a8918c18d49e20c6a, type: 3}
+  maxAttempts: 20
 --- !u!4 &1530160649
 Transform:
   m_ObjectHideFlags: 0
@@ -2786,7 +2787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   speed: 6
-  idleVelocityThreshold: 5
+  idleVelocityThreshold: 2
   currentColor: 
 --- !u!1 &1888181767
 GameObject:

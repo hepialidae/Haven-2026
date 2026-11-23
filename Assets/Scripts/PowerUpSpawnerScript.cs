@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class PowerUpSpawnerScript : MonoBehaviour
 {
     [SerializeField] private GameObject[] powerUps;
+    [SerializeField] private int maxAttempts = 100;
     private float timer;
     private float nextPowerUp;
     private List<GameObject> existingPowerUps = new List<GameObject>();
@@ -34,7 +36,7 @@ public class PowerUpSpawnerScript : MonoBehaviour
 
         yield return new WaitForSeconds(5f);
 
-        nextPowerUp = 3 + Random.Range(0.1f, 2f);
+        nextPowerUp = 3 + UnityEngine.Random.Range(0.1f, 2f);
         timer = 0;
     }
 
@@ -45,16 +47,46 @@ public class PowerUpSpawnerScript : MonoBehaviour
         if (timer >= nextPowerUp)
         {
             timer = 0;
-            GameObject powerUp = Instantiate(powerUps[Random.Range(0, powerUps.Length)]);
+            Vector3 newPos = new Vector3 (UnityEngine.Random.Range(-3.567f, 3.567f), UnityEngine.Random.Range(-4.49f, 4.49f), 0f);
+
+            if (existingPowerUps.Count != 0)
+            {
+                bool stop = false;
+                int attempts = 0;
+                while (stop == false && attempts < maxAttempts)
+                {
+                    for (int i = 0; i < existingPowerUps.Count; i++)
+                    {
+                        Transform powerUpTransform = existingPowerUps[i].transform;
+                        if (Math.Abs(powerUpTransform.position.x - newPos.x) <= 1f && Math.Abs(powerUpTransform.position.y - newPos.y) <= 1.12f)
+                        {
+                            newPos = new Vector3 (UnityEngine.Random.Range(-3.567f, 3.567f), UnityEngine.Random.Range(-4.49f, 4.49f), 0f);
+                            attempts += 1;
+                            break;
+                        }
+
+                        if (i == existingPowerUps.Count - 1)
+                        {
+                            stop = true;
+                        }
+                    }
+                }
+            }
+
+            GameObject powerUp = Instantiate(powerUps[UnityEngine.Random.Range(0, powerUps.Length)], newPos, Quaternion.identity);
             existingPowerUps.Add(powerUp);
         }
     }
 
     private void ResetGame()
     {
-        for (int i = 0; i < existingPowerUps.Count; i++)
+        if (existingPowerUps.Count != 0)
         {
-            Destroy(existingPowerUps[i]);
+            for (int i = 0; i < existingPowerUps.Count; i++)
+            {
+                Destroy(existingPowerUps[i]);
+                existingPowerUps = new List<GameObject>();
+            }
         }
 
         StartCoroutine(WaitForCutscene());

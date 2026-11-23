@@ -12,7 +12,8 @@ public class GamestateManagerScript : MonoBehaviour
     [SerializeField] private GameObject[] yellowSpacecrafts;
     private bool gameLoaded = false;
     public string ballColor = null; 
-    public Dictionary<string, int> powerUpStatus = new Dictionary<string, int>(); // 0 - inactive, 1 - green, 2 - yellow
+    private GameObject ball = null;
+    public Dictionary<string, int> powerUpStatus = new Dictionary<string, int>(); // 0 - inactive, 1 - green, 2 - yellow OR 1 - active
 
     void Awake()
     {
@@ -42,6 +43,7 @@ public class GamestateManagerScript : MonoBehaviour
         EventManagerScript.instance.ResetGame += ResetPowerups;
         EventManagerScript.instance.DoubleSpeed += StartTimeDoubleSpeed;
         powerUpStatus["2x Speed"] = 0;
+        powerUpStatus["2 Balls"] = 0;
     }
 
     private IEnumerator StartGame()
@@ -71,6 +73,14 @@ public class GamestateManagerScript : MonoBehaviour
     private void ResetPowerups()
     {
         powerUpStatus["2x Speed"] = 0;
+        powerUpStatus["2 Balls"] = 0;
+
+        StopAllCoroutines();
+        if (ball != null)
+        {
+            Destroy(ball);
+            ball = null;
+        }
     }
 
     public void RestartGame()
@@ -79,7 +89,18 @@ public class GamestateManagerScript : MonoBehaviour
         yellowSpacecraft = 99;
         ballColor = null;
         powerUpStatus["2x Speed"] = 0;
+        powerUpStatus["2 Balls"] = 0;
         gameLoaded = false;
         SceneManager.LoadScene("SpaceshipSelect");
+    }
+
+    public IEnumerator DoubleBalls(GameObject secondBall)
+    {
+        powerUpStatus["2 Balls"] = 1;
+        ball = Instantiate(secondBall);
+        yield return new WaitForSeconds(7.5f);
+        powerUpStatus["2 Balls"] = 0;
+        Destroy(ball);
+        ball = null;
     }
 }

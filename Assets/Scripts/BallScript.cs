@@ -22,7 +22,6 @@ public class BallScript : MonoBehaviour
         _transform = GetComponent<Transform>();
 
         _sr.color = Color.white;
-        canMove = false;
 
         GamestateManagerScript.instance.SpawnCrafts();
 
@@ -59,6 +58,7 @@ public class BallScript : MonoBehaviour
         _transform.position = newPos;
         _rb.linearVelocity = Vector3.zero;
         _rb.angularVelocity = 0f;
+        canMove = false;
 
         yield return new WaitForSeconds(5f);
 
@@ -68,7 +68,7 @@ public class BallScript : MonoBehaviour
         {
             xVelocity = 1f;
         }
-        float yVelocity = UnityEngine.Random.Range(-1, 1);
+        float yVelocity = UnityEngine.Random.Range(-0.5f, 0.5f);
         canMove = true;
         _rb.linearVelocity = new Vector2(xVelocity * speed, yVelocity * speed);
     }
@@ -91,7 +91,7 @@ public class BallScript : MonoBehaviour
         {
             timer = 0;
         }
-        if (timer >= 3f)
+        if (timer >= 5f)
         {
             EventManagerScript.instance.InvokeResetGame();
         }
