@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: 85429ade3d82049ff9e3d4bb814ecdb9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6380696124117817400
+    second: Green win_0
+  - first:
+      213: 7339135622930894948
+    second: Green win_1
+  - first:
+      213: -7624533380734602114
+    second: Green win_2
+  - first:
+      213: 751629124041072569
+    second: Green win_3
+  - first:
+      213: 3624841767082361401
+    second: Green win_4
+  - first:
+      213: 7055935262786986221
+    second: Green win_5
+  - first:
+      213: 254742967133314910
+    second: Green win_6
+  - first:
+      213: -7120746007943430079
+    second: Green win_7
+  - first:
+      213: -4009943641560852627
+    second: Green win_8
+  - first:
+      213: 8860799299476400527
+    second: Green win_9
+  - first:
+      213: 560572319577354928
+    second: Green win_10
+  - first:
+      213: 7255084981816543262
+    second: Green win_11
+  - first:
+      213: -158464201276547668
+    second: Green win_12
+  - first:
+      213: -7866641994477861883
+    second: Green win_13
+  - first:
+      213: 5090228457207436499
+    second: Green win_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Green win_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 871
+        width: 2059
+        height: 605
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83811c98159cc8850800000000000000
+      internalID: 6380696124117817400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green win_1
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 1247
+        width: 154
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4601633f6f8d9d560800000000000000
+      internalID: 7339135622930894948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green win_2
+      rect:
+        serializedVersion: 2
+        x: 2008
+        y: 1359
+        width: 10
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e74b4376947303690800000000000000
+      internalID: -7624533380734602114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green win_3
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 1335
+        width: 10
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bf5e4db4b25e6a00800000000000000
+      internalID: 751629124041072569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green win_4
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 1287
+        width: 18
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93281f5c1660e4230800000000000000
+      internalID: 3624841767082361401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green win_5
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 1049
+        width: 202
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de02290dcb7bbe160800000000000000
+      internalID: 7055935262786986221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green win_6
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 913
+        width: 170
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5f92010167098300800000000000000
+      internalID: 254742967133314910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green win_7
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 934
+        width: 77
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14040ccab370e2d90800000000000000
+      internalID: -7120746007943430079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green win_8
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 924
+        width: 202
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d67dd6be081d958c0800000000000000
+      internalID: -4009943641560852627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green win_9
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 913
+        width: 191
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f89225f2402e7fa70800000000000000
+      internalID: 8860799299476400527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green win_10
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 869
+        width: 740
+        height: 330
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b2335bfd8d87c700800000000000000
+      internalID: 560572319577354928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green win_11
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 959
+        width: 74
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1842741a5d3fa460800000000000000
+      internalID: 7255084981816543262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green win_12
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 913
+        width: 66
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cad9b4506a50dcdf0800000000000000
+      internalID: -158464201276547668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green win_13
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 913
+        width: 160
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5040af709c214d290800000000000000
+      internalID: -7866641994477861883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green win_14
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 887
+        width: 110
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d41f6900df14a640800000000000000
+      internalID: 5090228457207436499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9f0d2a87867c64a1a8fdd7aa4ea3e6fd
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Green win_0: 6380696124117817400
+      Green win_1: 7339135622930894948
+      Green win_10: 560572319577354928
+      Green win_11: 7255084981816543262
+      Green win_12: -158464201276547668
+      Green win_13: -7866641994477861883
+      Green win_14: 5090228457207436499
+      Green win_2: -7624533380734602114
+      Green win_3: 751629124041072569
+      Green win_4: 3624841767082361401
+      Green win_5: 7055935262786986221
+      Green win_6: 254742967133314910
+      Green win_7: -7120746007943430079
+      Green win_8: -4009943641560852627
+      Green win_9: 8860799299476400527
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

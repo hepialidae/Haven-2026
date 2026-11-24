@@ -1,0 +1,468 @@
+fileFormatVersion: 2
+guid: 77e4d5451ba93426dada5c53d5ef81be
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4714508918825751800
+    second: Yellowwin__0
+  - first:
+      213: 2070448936142448120
+    second: Yellowwin__1
+  - first:
+      213: 3756875600506509781
+    second: Yellowwin__2
+  - first:
+      213: -7052518165918016001
+    second: Yellowwin__3
+  - first:
+      213: 7595739677420171477
+    second: Yellowwin__4
+  - first:
+      213: 5875962320177740802
+    second: Yellowwin__5
+  - first:
+      213: -8501191878731390770
+    second: Yellowwin__6
+  - first:
+      213: 1925348110648315670
+    second: Yellowwin__7
+  - first:
+      213: 6593587166367210662
+    second: Yellowwin__8
+  - first:
+      213: -4571054924033242621
+    second: Yellowwin__9
+  - first:
+      213: -8194830441990964751
+    second: Yellowwin__10
+  - first:
+      213: -4914405596598846932
+    second: Yellowwin__11
+  - first:
+      213: -7181540993720726442
+    second: Yellowwin__12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Yellowwin__0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 867
+        width: 2045
+        height: 582
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f4150512ec4d6140800000000000000
+      internalID: 4714508918825751800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellowwin__1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1247
+        width: 162
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f52b547656bbbc10800000000000000
+      internalID: 2070448936142448120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellowwin__2
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 959
+        width: 333
+        height: 517
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d9d581347a132430800000000000000
+      internalID: 3756875600506509781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellowwin__3
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 934
+        width: 170
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffd977c081c602e90800000000000000
+      internalID: -7052518165918016001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellowwin__4
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 1049
+        width: 202
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d038fe1efc796960800000000000000
+      internalID: 7595739677420171477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellowwin__5
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 913
+        width: 170
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20c36c7199c9b8150800000000000000
+      internalID: 5875962320177740802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellowwin__6
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 934
+        width: 77
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec0a7cc0703b50a80800000000000000
+      internalID: -8501191878731390770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellowwin__7
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 924
+        width: 202
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61f892cd7e538ba10800000000000000
+      internalID: 1925348110648315670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellowwin__8
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 913
+        width: 191
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ac54eee790218b50800000000000000
+      internalID: 6593587166367210662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellowwin__9
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 869
+        width: 740
+        height: 330
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30ac23cd3c95090c0800000000000000
+      internalID: -4571054924033242621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellowwin__10
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 913
+        width: 66
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f9329e812d164e80800000000000000
+      internalID: -8194830441990964751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellowwin__11
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 913
+        width: 160
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2ab884c5268ccbb0800000000000000
+      internalID: -4914405596598846932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellowwin__12
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 887
+        width: 110
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65cce51048a065c90800000000000000
+      internalID: -7181540993720726442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 93b69904feb3940dfb86b62fbd23ec1d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Yellowwin__0: 4714508918825751800
+      Yellowwin__1: 2070448936142448120
+      Yellowwin__10: -8194830441990964751
+      Yellowwin__11: -4914405596598846932
+      Yellowwin__12: -7181540993720726442
+      Yellowwin__2: 3756875600506509781
+      Yellowwin__3: -7052518165918016001
+      Yellowwin__4: 7595739677420171477
+      Yellowwin__5: 5875962320177740802
+      Yellowwin__6: -8501191878731390770
+      Yellowwin__7: 1925348110648315670
+      Yellowwin__8: 6593587166367210662
+      Yellowwin__9: -4571054924033242621
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
