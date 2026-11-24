@@ -6,7 +6,7 @@ public class BallScript : MonoBehaviour
     private Transform _transform;
     private Rigidbody2D _rb;
     private SpriteRenderer _sr;
-    [SerializeField] private float speed = 6f;
+    [SerializeField] private float speed = 8f;
     [SerializeField] private float idleVelocityThreshold = 5f;
     private Color _green;
     private Color _yellow;
@@ -53,7 +53,6 @@ public class BallScript : MonoBehaviour
 
     private IEnumerator StartGame()
     {
-        speed = 6f;
         Vector3 newPos = new Vector3 (0f, 0f, 0f);
         _transform.position = newPos;
         _rb.linearVelocity = Vector3.zero;

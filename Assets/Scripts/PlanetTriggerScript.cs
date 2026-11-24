@@ -62,7 +62,7 @@ public class PlanetTriggerScript : MonoBehaviour
         if (input == color && hitsTaken != 0)
         {
             hitsTaken -= 1;
-            animatePlanet(planets[hitsTaken + 1], planets[hitsTaken]);
+            StartCoroutine(animatePlanet(planets[hitsTaken + 1], planets[hitsTaken]));
         }
     }
 }

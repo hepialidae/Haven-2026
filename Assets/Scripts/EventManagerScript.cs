@@ -8,6 +8,8 @@ public class EventManagerScript : MonoBehaviour
 
     [Serializable]
     public class StringEvent : UnityEvent<string> { }
+    [Serializable]
+    public class PowerUpEvent : UnityEvent<GameObject> { }
 
     void Awake()
     {
@@ -57,5 +59,11 @@ public class EventManagerScript : MonoBehaviour
     public void InvokeShield(string color)
     {
         Shield.Invoke(color);
+    }
+
+    public PowerUpEvent PowerUpTriggered;
+    public void InvokePowerUpTriggered(GameObject powerUp)
+    {
+        PowerUpTriggered.Invoke(powerUp);
     }
 }

@@ -22,12 +22,14 @@ public class PowerUpSpawnerScript : MonoBehaviour
     {
         EventManagerScript.instance.ResetGame += ResetGame;
         EventManagerScript.instance.LoseGame.AddListener(LoseGame);
+        EventManagerScript.instance.PowerUpTriggered.AddListener(RemovePowerUp);
     }
 
     void OnDisable()
     {
         EventManagerScript.instance.ResetGame -= ResetGame;
         EventManagerScript.instance.LoseGame.RemoveListener(LoseGame);
+        EventManagerScript.instance.PowerUpTriggered.RemoveListener(RemovePowerUp);
     }
 
     private IEnumerator WaitForCutscene()
@@ -95,5 +97,10 @@ public class PowerUpSpawnerScript : MonoBehaviour
     private void LoseGame(string color)
     {
         nextPowerUp = 999999999f;
+    }
+
+    private void RemovePowerUp(GameObject input)
+    {
+        existingPowerUps.Remove(input);
     }
 }

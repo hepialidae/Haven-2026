@@ -20,8 +20,6 @@ public class SecondBallScript : MonoBehaviour
 
         _sr.color = Color.white;
 
-        GamestateManagerScript.instance.SpawnCrafts();
-
         UnityEngine.ColorUtility.TryParseHtmlString("#B0FB76", out Color color);
         _green = color;
         UnityEngine.ColorUtility.TryParseHtmlString("#FEF07B", out Color color2);
