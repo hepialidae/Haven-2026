@@ -1,5 +1,11 @@
 # PolyForm Noncommercial License 1.0.0
 
+Repository: Haven 2026
+
+Licensor: [hepialidae](https://github.com/hepialidae)
+
+Contact: [LinkedIn](www.linkedin.com/in/whc-courtney) (High priority) Email: luminous.seelie@gmail.com
+
 <https://polyformproject.org/licenses/noncommercial/1.0.0>
 
 ## Acceptance

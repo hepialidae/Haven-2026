@@ -8,4 +8,4 @@ Art assets: [2026] [Venus Leung] All rights reserved.
 
 Source code: Please refer to LICENSE.md.
 
-Sound tracks and effects: Subject to the rights retained by the original creators.
+Sound tracks and effects: All rights are retained by their original creators.
